@@ -1,0 +1,625 @@
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  :root {
+    --main-color:rgb(248, 195, 213);
+    --secondairy-color:rgb(0, 0, 0);
+    --hightlight-color:White;
+    
+    --background-color:white;
+    --background-highlight-color:#ffffff;
+    
+    --shadow-color:#2F4F4F33;
+  }
+
+  body {
+    margin:0;
+    background-color:var(--background-color);
+    
+    font-family:'Saira', sans-serif;
+    color:var(--main-color);
+  }
+
+
+  header {
+    background-color: white;
+    height: 8em;
+  }
+
+  footer{
+    background-color: black;
+    margin-top: 4em;
+  }
+
+ 
+
+
+ /* Dit is om de gehele header met de NAV op zijn plek te houden*/
+
+ header {
+  position: fixed;
+  width: 100%;
+
+ }
+
+
+
+
+  /************/
+  /***NAVBAR***/
+  /************/
+  
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    
+  }
+
+  /*NAV*/
+  nav{
+    display: block;
+  }
+
+  header ul:nth-of-type(1){
+   display: flex;
+   text-transform: uppercase;
+   margin:auto;
+   align-items: center;
+   height: 20px;
+   
+ }
+
+ 
+
+
+ /*Dit is het eerste blok van de NAV waarin 
+   de tekst Kylie staat*/
+ 
+  header ul li:nth-of-type(1){
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 3.5em;
+    padding: 1em 1em;
+    margin-top: 15px;
+    
+  }
+
+  /*Dit is het tweede blok van de NAV waarin de tekst
+    Kyliecosmetic staat*/
+
+  header ul li:nth-of-type(2){
+    background-color: black;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 3.5em;
+    padding: 1em 1em;
+    margin-top: 15px;
+  }
+
+  /*Dit is het derde blok van de NAV waarin de tekst
+     Kylieskin staat*/
+  
+  header ul li:nth-of-type(3){
+    background-color: rgb(250, 201, 217);
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 3.5em;
+    padding: 1em 1em;
+    margin-top: 15px;
+
+  }
+
+   /*Dit is het vierde blok van de NAV waarin de tekst
+     Kyliebaby staat*/
+
+  header ul li:nth-of-type(4){
+    background-color: rgb(184, 210, 240);
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 3.5em;
+    padding: 1em 1em;
+    margin-top: 15px;
+  }
+
+  /*Dit staat onder het logo van de website over het bestellen
+    voor 21:00*/
+     
+  header p:nth-of-type(1) {
+    background-color: rgb(247, 202, 209);
+    
+    justify-content: center;
+    margin-top: 1em;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1em 1em;  
+  }
+
+
+  
+
+
+  
+  /************/
+  /***IMAGES***/
+  /***********/
+
+  /*De tweede foto van Pagina 1 waarop Kylie te zien is*/
+  main img:nth-of-type(1) {
+    width: 100%;
+    height: auto;
+    margin-top: -1em;
+    align-items: center;
+    display: flex; 
+  }
+
+
+  /*De derde image van pagina 1 onder Kylie's value's titel */
+  main img:nth-of-type(2) {
+    width: 40%;
+    align-items: center;
+    max-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    
+  }
+
+  /*Dit is een GIF dat onder de tekst voorbij komt van 
+    Kylie's values*/
+  .wolken{
+    height: 100px;
+    width: 100%;
+  }
+  
+
+  /*Dit is om te zorgen dat Het tekst vlak waar de shop now buttons staat
+    onder de NAV/header komt te staan*/
+  main li:nth-of-type(1) {
+    height: 8em;
+  }
+
+  
+  /*Het logo van pagina 1 dat in de header staat*/
+  header img:nth-of-type(1) {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    margin-top: 1em;
+    background-color: white;
+    
+  }
+
+  /**********************/
+  /******** link ********/
+  /**********************/
+  
+  /*Dit is voor de NAV waarbij de linkjes naar de pagina's
+    een balk onder zich krijgen wanneer de muis over de hover gaat*/
+
+  header a{
+    position:relative;
+  
+    color:var(--link-color);
+    
+    text-decoration:none;
+    outline:none;
+  }
+
+  header a::before {
+    content:"";
+    background-color:currentcolor;
+    
+    position:absolute;
+    
+    left:.5em;
+    right:.5em;
+    bottom:-.25em;
+    
+    height:.25em;
+    
+    border-radius:.125em;
+    
+    transform:scalex(0);
+    transition:.3s;
+  }
+
+  header a:hover::before {
+    transform:scalex(1);
+  }
+  
+
+ /************************/
+ /***P en H van de Main***/
+ /************************/
+
+ /*Is op de eerste pagina waarin de tekst lipcare routine
+   staat, dit is de gehele stijling daarvan*/
+ main p:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  padding: .80em;
+  text-decoration: none;
+  font-weight: 700;
+  color:rgb(212, 144, 155);
+  background-color: rgb(255, 230, 230);
+  
+}
+
+
+ /*De informatie tekst van kylie's values dat onder het kopje
+  clean staat*/
+ main p:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  
+  font-size: 12px;
+  color: rgb(105, 105, 105);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1em;
+  text-decoration: none;
+  margin-right: 3.25em;
+  margin-left: 3.25em;
+  
+  text-align: center;
+  margin-top: -4em;
+}
+
+
+/*De h6 van de eerste pagina De titel clean*/
+main h6:nth-of-type(1) {
+  margin-top: 1em;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 22px;
+}
+
+
+/*H2 van de eerste pagina*/
+main li h2:nth-of-type(1) {
+  text-align: center;
+  background-color: black;
+  height: 6em;
+  color: white;
+  margin-top: -.25em;
+  padding: 0.80em;
+}
+
+
+/* De titel kylie's values*/
+.values {
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin-top: 1em;
+}
+
+
+
+
+
+/**************/
+/*** Button ***/
+/**************/
+
+/*De contact button*/
+main li a:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  
+  
+  color: #ffffff;
+  background-color: rgb(240, 158, 182);
+  margin-top: -7em;
+  height: -3em;
+  padding: 12px 44px;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 8em;
+  margin-right: 8em;
+  font-size: 14px;
+}
+
+/*hover van de button in het zwarte vlak*/
+main li a:nth-of-type(1) :hover{
+  cursor: pointer;
+ 
+}
+
+
+/*Contact button aan de zeikant van de pagina*/
+#menu {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 13em;
+  margin-top: -9em;
+  transform: rotate(90deg);
+   
+}
+
+
+/* De shop now button met hover*/
+
+ main button {
+  grid-column:1/-1;
+  margin:0 1em 1em 1em;
+  padding: 11px 33px;
+  line-height: 20px;
+  margin-left: 12em ;
+  margin-top: -6em;
+  height: -3em;
+
+  display: flex;
+  justify-content: center;
+
+  font-family:inherit;
+  font-size: 12px;
+  font-weight:700;
+  border: 1px solid white;
+  
+  cursor:pointer;
+  
+  color:white;
+  background-color:black;
+}
+
+main button:hover,
+main button:focus {
+  color:black;
+  background-color:white;
+}
+
+
+
+
+
+
+
+/********************************/
+/*** Alle id's van de pagina's***/
+/********************************/
+
+#roze {
+  width: 7em;
+}
+
+#skinproduct {
+   margin-top: 4.50em;
+}
+
+#skin {
+  margin-top: 7.25em;
+}
+
+#kylieskin {
+  margin-top: -7.25em;
+}
+
+iframe {
+  width:415px;
+  height:215px;
+  
+}
+
+#routine {
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
+}
+
+#clean{
+  margin-top: -1em;
+  background-color: white;
+  color: grey;
+  text-align: center;
+  margin-left: 4em;
+  margin-right: 4em;
+  font-size: 12px;
+  
+}
+
+#black {
+  background-color:rgb(255, 230, 230);
+  margin-top: -0.40em;
+  width: 425px;
+  margin-left: -1em;
+  height: 3em;
+}
+
+#social {
+
+  height: 9.25em;
+}
+
+#icon{
+  margin-top: -7.75em;
+}
+
+
+
+
+/**************************/
+/***Alles voor de footer***/
+/**************************/
+
+  /*om de social iconen op hun plek te zetten*/
+  footer ul{
+    display: flex;
+    margin-left: 7em;
+    background-color: black;
+  
+  }
+  
+  /*Om de social iconen te stijlen*/
+  footer ul li img{
+    display: list-item;
+    text-transform: uppercase;
+    margin:auto;
+    align-items: center;
+    margin-top: 2em;
+    width: 20px;
+    background-color: black;
+    margin-left: 1em;
+    
+  }
+
+  /*Stijling van de titel in de footer, Connect with us*/
+  #footer {
+  background-color: black;
+  height: 3em;
+  margin-top: -1em;
+  text-align: center;
+  padding: 0.50em;
+  color: white;
+}
+
+
+ /* De social namen van de footer*/
+  footer h6 {
+  background-color: black;
+  color: white;
+  margin: auto;
+  padding: 2.25em;
+  margin-top: -5em;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+
+/********************************/
+/*Contact formulier in de footer*/
+/********************************/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: white;
+}
+
+input[type=submit] {
+  background-color: #ff99b8;
+  color: white;
+  padding: 12px ;
+  width: 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+label{
+  color: white;
+}
+
+.container {
+  border-radius: 5px;
+  background-color:black;
+  padding: 20px;
+}
+
+h3{
+  color: white;
+  margin-top: 10em;
+  text-align: center;
+  display: flex;
+  text-decoration:none;
+  margin-left: 6em;
+ ;
+}
+
+
+
+
+
+/*****************/
+/***Zoekfunctie***/
+/*****************/
+
+
+#form {
+  background-color: #ffd7e3;
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  margin-left: 16.25em;
+  
+}
+
+input {
+  all: unset;
+  font: 12px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: rgb(148, 148, 148);
+  opacity: 0.7; 
+}
+
+#zoek {
+  background-color: rgb(255, 176, 200);
+  color: white;
+  border: 1px solid white;
+}
+
+
+
+/******************************************/
+/**** Voor javascript, lettertype grote****/
+/******************************************/
+
+.groter {
+  font-size: 17px;
+}
+
+.knopje {
+  margin-top: 1em;
+  margin-left: 2em;
+}
